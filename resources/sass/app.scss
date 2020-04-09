@@ -1,1 +1,38 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// my css
+@import 'pages/welcome',
+        'pages/login',
+        'pages/home',
+        'pages/session'
+;
+
+@import 'forms';
+
+html,body {
+    font-family: Avenixel-Regular, monospace, san-serif;
+    background: $black;
+    color: $white;
+}
+
+p,a,button,input {
+    font-family: Avenixel-Regular, monospace, san-serif;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+a {
+    color: $yellow;
+}
+a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.content {
+    text-align: center;
+}

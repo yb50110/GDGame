@@ -1,0 +1,13 @@
+.container-session {
+    transform: translateY(100%);
+
+    .session-id {
+        padding: 10px 35px;
+        font-size: 3em;
+        color: $black;
+        background: $white;
+        width: 200px;
+        text-align: center;
+        margin: auto;
+    }
+}

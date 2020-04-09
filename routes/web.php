@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+Route::get('/quit', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/new', 'SessionController@new')->name('session.new');
+Route::get('/join', 'SessionController@join')->name('session.join');
