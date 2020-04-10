@@ -23,4 +23,6 @@ Route::get('/quit', '\App\Http\Controllers\Auth\LoginController@logout')->name('
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/new', 'SessionController@new')->name('session.new');
-Route::get('/join', 'SessionController@join')->name('session.join');
+Route::get('/join', 'SessionController@join_form')->name('session.join_form');
+Route::post('/join', 'SessionController@join')->name('session.join');
+Route::get('/start', 'SessionController@start')->name('session.start');

@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);@font-face {
+  font-family: Avenixel-Regular;
+  src: url("../fonts/Avenixel-Regular.ttf");
+}
+.container-welcome {
+  transform: translateY(100%);
+}
+
+.title {
+  font-size: 7em;
+}
+
+.container-login {
+  width: 50%;
+  margin: auto;
+  transform: translateY(100%);
+}
+.container-login button {
+  margin-top: 40px;
+}
+
+.container-home button {
+  display: block;
+  margin: 100px auto;
+}
+.container-home button a:hover {
+  opacity: 1;
+}
+
+.container-session {
+  transform: translateY(100%);
+}
+.container-session h1 {
+  font-size: 3em;
+}
+.container-session .session-id {
+  padding: 10px 35px;
+  font-size: 3em;
+  color: #000000;
+  background: #ffffff;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+input {
+  box-sizing: border-box;
+  background-image: none !important;
+  border: none;
+  outline: none;
+  padding: 15px 35px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+button {
+  border: none;
+  position: relative;
+  background: transparent;
+}
+button p, button a {
+  display: block;
+  position: relative;
+  margin: 0;
+  font-size: inherit;
+  padding: 10px 35px;
+  background: #ffffff;
+  border-bottom: 10px solid #d4d4d4;
+}
+button:before {
+  position: absolute;
+  height: calc(100% - 30px);
+  width: calc(100% + 6px);
+  top: 10px;
+  left: -3px;
+  content: "";
+  background-color: #ffffff;
+  border-bottom: 10px solid #d4d4d4;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(10px);
+}
+button:hover p, button:hover a {
+  border-bottom-width: 0;
+}
+button:hover:before {
+  height: calc(100% - 20px);
+  border-bottom-width: 0;
+}
+
+html, body {
+  font-family: Avenixel-Regular, monospace, san-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+p, a, button, input {
+  font-family: Avenixel-Regular, monospace, san-serif;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+a {
+  color: #e6ca48;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.content {
+  text-align: center;
+}

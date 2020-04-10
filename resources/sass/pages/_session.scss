@@ -1,6 +1,10 @@
 .container-session {
     transform: translateY(100%);
 
+    h1 {
+        font-size: 3em;
+    }
+
     .session-id {
         padding: 10px 35px;
         font-size: 3em;

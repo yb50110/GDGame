@@ -4,12 +4,9 @@
 
     <div class="container-session">
 
-        <h1>Waiting for more players...</h1>
-{{--        todo: get number of players.... check session_user table for how many users for this session--}}
+        <h1>Waiting for {{ 2 - $user_count }} more player(s)...</h1>
         <p>This session id is</p>
         <div class="session-id">{{ $session->id }}</div>
-
-
 
     </div>
 
