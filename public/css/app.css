@@ -28,7 +28,7 @@
 }
 
 .container-session {
-  transform: translateY(100%);
+  transform: translateY(15%);
 }
 .container-session h1 {
   font-size: 3em;
@@ -40,6 +40,30 @@
   background: #ffffff;
   width: 200px;
   text-align: center;
+  margin: auto;
+}
+.container-session form {
+  width: 700px;
+}
+.container-session form input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.container-session form input[type=radio] + img {
+  cursor: pointer;
+  margin: 0 15px;
+}
+.container-session form input[type=radio]:checked + img {
+  border-bottom: 10px solid #e6ca48;
+}
+.container-session form button {
+  margin-top: 50px;
+}
+
+form {
+  width: 500px;
   margin: auto;
 }
 

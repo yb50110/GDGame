@@ -3,25 +3,24 @@
 @section('content')
 
     <div class="container-session">
-
-        <h1>Waiting for {{ 2 - $user_count }} more player(s)...</h1>
-        <p>This session id is</p>
-        <div class="session-id">{{ $session->id }}</div>
+        <h1>Please wait for host to start...</h1>
 
         <script>
             setInterval(function() {
                 $.ajax({
                     type: "GET",
-                    url: "count/{{ $session->id }}",
+                    url: "start/check/{{ $session_id }}",
                     dataType: 'json',
-                    data: 'id={{ $session->id }}',
+                    data: 'id={{ $session_id }}',
                     cache: false,
                     success: function (data) {
-                        if (data >= 2) {
-                            // user count met! ... sending to start page...
-                            window.location.href = "{{ route('session.start', ['id' => $session->id]) }}";
+                        console.log(data);
+                        if (data) {
+                            // the session started
+                            // redirect to set name page
+                            window.location.href = "{{ route('session.name', ['session_id' => $session_id]) }}";
                         } else {
-                            // user count not met yet
+                            // session not started yet
                         }
                     },
                     error: function (data) {

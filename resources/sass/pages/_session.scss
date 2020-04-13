@@ -1,5 +1,5 @@
 .container-session {
-    transform: translateY(100%);
+    transform: translateY(15%);
 
     h1 {
         font-size: 3em;
@@ -13,5 +13,30 @@
         width: 200px;
         text-align: center;
         margin: auto;
+    }
+
+
+    form {
+        width: 700px;
+
+        input[type=radio] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            + img {
+                cursor: pointer;
+                margin: 0 15px;
+            }
+
+            &:checked + img {
+                border-bottom: 10px solid $yellow;
+            }
+        }
+
+        button {
+            margin-top: 50px;
+        }
     }
 }

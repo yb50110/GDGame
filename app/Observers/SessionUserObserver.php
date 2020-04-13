@@ -16,14 +16,13 @@ class SessionUserObserver
      */
     public function created(SessionUser $sessionUser)
     {
-        // if limit is filled
-        $user_id = Auth::user()->id;
-        $session = Session::where(['creator_id', $user_id], ['expired', false])->latest('created_at')->first();
-        $sessionUserCount = SessionUser::where('session_id', $session->id)->count();
-
-        if ($sessionUserCount >= 2) {
-            return redirect()->route('session.start')->send();
-        }
+//        // if limit is filled
+//        $session = Session::find($sessionUser->session_id);
+//        $sessionUserCount = SessionUser::where('session_id', $session->id)->count();
+//
+//        if ($sessionUserCount >= 2) {
+//            return redirect()->route('session.start')->send();
+//        }
     }
 
     /**

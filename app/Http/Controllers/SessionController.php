@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\Session;
 use App\SessionUser;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ class SessionController extends Controller
         $creator_id = Auth::user()->id;
 
         // check if user has made another session before... if so, expire them
-        $old_session = Session::where('creator_id', $creator_id)
+        Session::where('creator_id', $creator_id)
             ->update(['expired' => true]);
 
         // create session
@@ -55,14 +56,69 @@ class SessionController extends Controller
 
         if ($session_user_count < 2) {
             // add user to session (session_user)
-            return 'you are being added!';
+            $session_user = new SessionUser;
+            $session_user->session_id = $request->session_id;
+            $session_user->user_id = Auth::user()->id;
+            $session_user->save();
+
+            return view('sessions/wait', ['session_id' => $request->session_id]);
         } else {
             return view('sessions/join-failed');
         }
     }
 
-    public function start() {
-        //
-        return view('sessions/start');
+    public function count(int $id) {
+        // count users
+        return SessionUser::where('session_id', $id)
+            ->count();
+    }
+
+    // FUNCTIONS RELATING TO STARTING SESSION-----------------------------------
+    // -------------------------------------------------------------------------
+    public function start(int $id) {
+        // only host see this page
+        return view('sessions/start', ['session_id' => $id]);
+    }
+
+    public function start_update(int $id) {
+        Session::find($id)
+            ->update(['started' => true]);
+
+        return view('sessions/name', ['session_id' => $id]);
+    }
+
+    public function start_check(int $id) {
+        return Session::find($id)->started;
+    }
+    // -------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
+
+
+    // FUNCTIONS RELATING TO SETTING NAME---------------------------------------
+    // -------------------------------------------------------------------------
+    public function name(int $session_id) {
+        return view('sessions/name', ['session_id' => $session_id]);
+    }
+
+    public function name_update(Request $request, int $session_id) {
+        SessionUser::where([
+            ['session_id', $session_id], ['user_id', Auth::user()->id]
+        ])->update(['name' => $request->session_name]);
+
+        $roles = Role::all();
+
+        return view('sessions/role', ['session_id' => $session_id, 'roles' => $roles]);
+    }
+    // -------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
+
+    public function role_update(Request $request, int $session_id) {
+        SessionUser::where([
+            ['session_id', $session_id], ['user_id', Auth::user()->id]
+        ])->update(['role_id' => $request->role]);
+
+//        $other_player = SessionUser::
+
+        return view('scenes/wait', ['session_id' => $session_id]);
     }
 }
