@@ -11,7 +11,7 @@
             <div class="role-options">
                 @foreach ($roles as $role)
                     <label>
-                        <input type="radio" name="role" value="{{ $role->id }}">
+                        <input type="radio" name="role" value="{{ $role->id }}" required>
                         <img src="{{ $role->default_image_link }}">
                     </label>
                 @endforeach

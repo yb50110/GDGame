@@ -5,7 +5,7 @@
     <div class="container-scene">
         @yield('image')
 
-        @yield('prompt')
+        <p>@yield('prompt')</p>
 
         @yield('options')
     </div>

@@ -34,7 +34,10 @@ ROUTE::post('/session/{session_id}/role', 'SessionController@role_update')->name
 // ajax routes
 Route::get('/count/{id}', 'SessionController@count');
 Route::get('/start/check/{id}', 'SessionController@start_check');
+Route::get('/session/{session_id}/role/check', 'SessionController@role_check')->name('session.role_check');
+Route::get('/session/{session_id}/{decision_id}/check', 'SceneController@decision_check');
 
-// routes for actual scenes
+// routes for actual scenes-jack
 Route::get('/session/{session_id}/wait', 'SceneController@show')->name('scene.wait');
 Route::get('/session/{session_id}/scene/{scene_id}', 'SceneController@show')->name('scene.show');
+Route::get('/session/{session_id}/scene/{scene_id}/{decision_id}/{option}', 'SceneController@decision')->name('scene.decision');

@@ -61,7 +61,7 @@ class SessionController extends Controller
             $session_user->user_id = Auth::user()->id;
             $session_user->save();
 
-            return view('sessions/wait', ['session_id' => $request->session_id]);
+            return view('sessions/wait-start', ['session_id' => $request->session_id]);
         } else {
             return view('sessions/join-failed');
         }
@@ -90,8 +90,6 @@ class SessionController extends Controller
     public function start_check(int $id) {
         return Session::find($id)->started;
     }
-    // -------------------------------------------------------------------------
-    // -------------------------------------------------------------------------
 
 
     // FUNCTIONS RELATING TO SETTING NAME---------------------------------------
@@ -109,16 +107,27 @@ class SessionController extends Controller
 
         return view('sessions/role', ['session_id' => $session_id, 'roles' => $roles]);
     }
-    // -------------------------------------------------------------------------
-    // -------------------------------------------------------------------------
 
+
+    // FUNCTIONS RELATING TO SETTING NAME---------------------------------------
+    // -------------------------------------------------------------------------
     public function role_update(Request $request, int $session_id) {
         SessionUser::where([
             ['session_id', $session_id], ['user_id', Auth::user()->id]
         ])->update(['role_id' => $request->role]);
 
-//        $other_player = SessionUser::
+        return view('sessions/wait-roles', ['session_id' => $session_id]);
+    }
 
-        return view('scenes/wait', ['session_id' => $session_id]);
+    public function role_check(int $session_id) {
+        $session_user_records = SessionUser::where('session_id', $session_id)->get();
+
+        foreach ($session_user_records as $record) {
+            if ($record->role_id == null) {
+                return 'false';
+            }
+        }
+
+        return 'true';
     }
 }
