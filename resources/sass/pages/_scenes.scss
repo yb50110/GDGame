@@ -1,0 +1,17 @@
+.container-scene {
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        max-width: 600px;
+        width: 90%;
+        margin: auto;
+    }
+
+    a:first-of-type {
+        margin-top: 50px;
+        display: block;
+    }
+}

@@ -1,7 +1,7 @@
 @extends('layouts.scene')
 
 @section('image')
-
+    <img src="/images/2-plane-crash.jpg">
 @endsection
 
 @section('prompt')

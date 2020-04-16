@@ -14,7 +14,7 @@
                     data: 'session_id={{ $session_id }}',
                     cache: false,
                     success: function (data) {
-                        if (data) {
+                        if (data === 'true') {
                             window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 1]) }}";
                         } else {
                             // other user didn't select a role yet

@@ -35,7 +35,7 @@ ROUTE::post('/session/{session_id}/role', 'SessionController@role_update')->name
 Route::get('/count/{id}', 'SessionController@count');
 Route::get('/start/check/{id}', 'SessionController@start_check');
 Route::get('/session/{session_id}/role/check', 'SessionController@role_check')->name('session.role_check');
-Route::get('/session/{session_id}/{decision_id}/check', 'SceneController@decision_check');
+Route::get('/session/{session_id}/{decision_id}/check', 'SceneController@decision_check')->name('session.decision_check');
 
 // routes for actual scenes-jack
 Route::get('/session/{session_id}/wait', 'SceneController@show')->name('scene.wait');
