@@ -7,6 +7,9 @@
 @section('prompt')
     RALPH:
     You ask {{ $other_player }} what we can do with it.
+    <br>
+    <br>
+    Waiting for {{ $other_player }} to make a decision...
 @endsection
 
 @section('options')

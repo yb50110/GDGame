@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="container-session">
+        <img src="/images/0-hourglass.jpg">
         <h1>Waiting for other player...</h1>
 
         <script>

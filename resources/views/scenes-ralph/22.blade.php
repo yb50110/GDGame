@@ -6,28 +6,25 @@
 
 @section('prompt')
     RALPH:
-    waiting for {{ $other_player }} to make a decision...
+    Waiting for {{ $other_player }} to make a decision...
 @endsection
 
 @section('options')
-
     <script>
-        // ajax call to check if a decision has been made
-
         setInterval(function() {
             $.ajax({
                 type: "GET",
-                url: "{{ route('session.decision_check', ['session_id' => $session_id, 'decision_id' => 'B']) }}",
+                url: "{{ route('session.decision_check', ['session_id' => $session_id, 'decision_id' => 'H']) }}",
                 dataType: 'text',
-                data: {'session_id':'{{ $session_id }}', 'decision_id':'B'},
+                data: {'session_id':'{{ $session_id }}', 'decision_id':'H'},
                 cache: false,
                 success: function (data) {
                     if (data === '0') {
-                        // jack declines
-                        console.log('Jack declines');
+                        // jack chooses fishing
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 24]) }}";
                     } else if (data === '1') {
-                        // jack accepts
-                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 7]) }}";
+                        // jack choosing hunting
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 23]) }}";
                     }
                 },
                 error: function (data) {
@@ -35,7 +32,5 @@
                 }
             });
         }, 500);
-
     </script>
-
 @endsection

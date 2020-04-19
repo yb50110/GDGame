@@ -28,7 +28,7 @@
 }
 
 .container-session {
-  transform: translateY(15%);
+  transform: translateY(10%);
 }
 .container-session h1 {
   font-size: 3em;
@@ -41,6 +41,12 @@
   width: 200px;
   text-align: center;
   margin: auto;
+}
+.container-session img {
+  width: 100%;
+}
+.container-session .role-options img {
+  width: auto;
 }
 .container-session form {
   width: 700px;
