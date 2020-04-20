@@ -5,9 +5,9 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} agrees to help hunting.
+    You both begin walking to the jungle.
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 58]) }}">next</a>
+    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 63]) }}">next</a>
 @endsection

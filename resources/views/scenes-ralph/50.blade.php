@@ -9,7 +9,8 @@
 @endsection
 
 @section('options')
-    check jack's Q...
+    if jack's O is 1, wait to
+    check jack's Q... (check 20 sec)
     if 1: go to 51;
     else: go to 52
 @endsection

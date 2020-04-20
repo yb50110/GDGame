@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} agrees to help hunting.
+    You both begin walking to the jungle.
 @endsection
 
 @section('options')

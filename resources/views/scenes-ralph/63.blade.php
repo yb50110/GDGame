@@ -5,9 +5,9 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} agrees to help hunting.
+    You explain to {{ $other_player }} what happened.
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 58]) }}">next</a>
+    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => x]) }}">next</a>
 @endsection

@@ -5,9 +5,11 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} agrees to help hunting.
+    You continue to dry your shirt.
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 58]) }}">next</a>
+    // wait for ralph S:
+    if 1: go to 51
+    if 0: go to 52
 @endsection

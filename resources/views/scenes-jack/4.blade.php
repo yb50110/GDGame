@@ -27,7 +27,7 @@
                         window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 5]) }}";
                     } else if (data === '1') {
                         // ralph approached piggy
-                        console.log('Ralph went to Piggy');
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 51]) }}";
                     }
                 },
                 error: function (data) {

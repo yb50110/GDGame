@@ -24,7 +24,7 @@
                 success: function (data) {
                     if (data === '0') {
                         // jack declines
-                        console.log('Jack declines');
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 8]) }}";
                     } else if (data === '1') {
                         // jack accepts
                         window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 7]) }}";

@@ -5,8 +5,7 @@
 @endsection
 
 @section('prompt')
-    Ralph:
-    You reluctantly agree to help hunting.
+    You notice {{ $other_player }} returning to the shore from the jungle.
 @endsection
 
 @section('options')
