@@ -44,6 +44,7 @@ class CreateSessionsTable extends Migration
             $table->boolean('S')->nullable();
             $table->boolean('T')->nullable();
             $table->boolean('U')->nullable();
+            $table->boolean('FIRE')->nullable();
         });
     }
 
