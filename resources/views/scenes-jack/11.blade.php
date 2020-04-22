@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     {{ $other_player }} asks what we should or could do with it...
 @endsection
 

@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     You notice {{ $other_player }} picking it up.
 @endsection
 

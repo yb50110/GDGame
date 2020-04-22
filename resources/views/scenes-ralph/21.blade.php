@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     You split the group into two: hunting in the jungle or fishing.
     <br>
     You ask {{ $other_player }} what group {{ $other_player }} would like to join.

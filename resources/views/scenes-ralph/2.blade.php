@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     The plane gets caught in a storm! You hear a loud crashing noise and you black out.
 @endsection
 

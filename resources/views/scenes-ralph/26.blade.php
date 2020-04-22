@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     {{ $other_player }} says that Piggy's idea is crap.
 @endsection
 

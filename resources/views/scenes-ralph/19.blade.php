@@ -5,9 +5,9 @@
 @endsection
 
 @section('prompt')
-    An argument begins buck you realize you are outnumbered.
+    Piggy has you all split off into two groups.
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 33]) }}">next</a>
+    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 0]) }}">next</a>
 @endsection

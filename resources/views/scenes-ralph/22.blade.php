@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     Waiting for {{ $other_player }} to make a decision...
 @endsection
 

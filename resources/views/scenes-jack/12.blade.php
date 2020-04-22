@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     Together, you gather the others and ask what we can do with the conch.
 @endsection
 

@@ -5,9 +5,9 @@
 @endsection
 
 @section('prompt')
-    An argument begins buck you realize you are outnumbered.
+    You and {{ $other_player }} separate.
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 33]) }}">next</a>
+    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 0]) }}">next</a>
 @endsection

@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     You approach {{ $other_player }} and ask to explore the island together.
 @endsection
 

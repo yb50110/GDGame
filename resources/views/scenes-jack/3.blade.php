@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     You wake up. You notice your clothing is soaked and decide to dry your tops.
 @endsection
 

@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     You and {{ $other_player }} both go fishing.
 @endsection
 

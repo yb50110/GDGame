@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     You ask {{ $other_player }} what we can do with it.
     <br>
     <br>

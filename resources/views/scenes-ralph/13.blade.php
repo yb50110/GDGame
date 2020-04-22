@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     {{ $other_player }} suggests calling the others and asking them too.
 @endsection
 

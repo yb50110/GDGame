@@ -36,6 +36,10 @@
             + img {
                 cursor: pointer;
                 margin: 0 15px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
             }
 
             &:checked + img {
@@ -45,6 +49,8 @@
 
         button {
             margin-top: 50px;
+
+
         }
     }
 }

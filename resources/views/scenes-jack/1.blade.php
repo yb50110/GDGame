@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     You are coming back home from a scouts camp. You and the other kids are riding on a plane.
 @endsection
 

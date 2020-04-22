@@ -16,7 +16,7 @@ class InsertRolesTable extends Migration
         DB::table('roles')->insert([
             'name' => 'Jack',
             'description' => 'Natural born leader but could be a little aggressive when things don\'t turn out the way he wants',
-            'default_image_link' => '/images/0-Jacke.jpg'
+            'default_image_link' => '/images/0-Jack.jpg'
         ]);
         DB::table('roles')->insert([
             'name' => 'Ralph',

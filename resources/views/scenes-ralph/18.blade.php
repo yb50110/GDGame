@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     Piggy takes the conch and say they should start a fire.
 @endsection
 

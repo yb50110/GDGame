@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     {{ $other_player }} agrees to help.
 @endsection
 

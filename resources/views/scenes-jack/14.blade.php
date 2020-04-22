@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     The idea is accepted.
 @endsection
 

@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     You criticizes {{ $other_player }}.
     <br>
     There seem to be some tension...

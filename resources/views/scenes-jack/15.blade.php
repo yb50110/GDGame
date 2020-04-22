@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     Waiting for {{ $other_player }} to make a decision...
 @endsection
 

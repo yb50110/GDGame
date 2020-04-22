@@ -23,6 +23,9 @@
   display: block;
   margin: 100px auto;
 }
+.container-home button:hover {
+  margin-bottom: 110px;
+}
 .container-home button a:hover {
   opacity: 1;
 }
@@ -60,6 +63,9 @@
 .container-session form input[type=radio] + img {
   cursor: pointer;
   margin: 0 15px;
+}
+.container-session form input[type=radio] + img:hover {
+  opacity: 0.8;
 }
 .container-session form input[type=radio]:checked + img {
   border-bottom: 10px solid #e6ca48;
@@ -125,11 +131,10 @@ button:hover {
   transform: translateY(10px);
 }
 button:hover p, button:hover a {
-  border-bottom-width: 0;
+  border-bottom-color: #000000;
 }
 button:hover:before {
-  height: calc(100% - 20px);
-  border-bottom-width: 0;
+  border-bottom-color: #000000;
 }
 
 html, body {

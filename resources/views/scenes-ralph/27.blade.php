@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     Piggy's idea is rejected and becomes useless.
 @endsection
 

@@ -9,7 +9,7 @@
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => x, 'decision_id' => 'U', 'option' =>1]) }}">Long stick</a>
+    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => 0, 'decision_id' => 'U', 'option' =>1]) }}">Long stick</a>
     <br>
-    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => x, 'decision_id' => 'U', 'option' => 0]) }}">Short stick</a>
+    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => 0, 'decision_id' => 'U', 'option' => 0]) }}">Short stick</a>
 @endsection

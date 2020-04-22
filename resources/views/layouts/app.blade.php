@@ -22,6 +22,7 @@
         <div class="top-right links">
             @auth
                 <a href="{{ route('logout') }}">Quit</a>
+                <a href="{{ route('home') }}">Home</a>
             @endauth
         </div>
     @endif

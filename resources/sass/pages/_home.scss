@@ -3,6 +3,10 @@
         display: block;
         margin: 100px auto;
 
+        &:hover {
+            margin-bottom: 110px;
+        }
+
         a:hover {
             opacity: 1;
         }

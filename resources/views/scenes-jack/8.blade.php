@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     You two discover a conch on the sand.
     <br>
     <br>

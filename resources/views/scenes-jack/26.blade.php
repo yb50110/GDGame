@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     You break the silence by suggesting we should hunt for food.
 @endsection
 

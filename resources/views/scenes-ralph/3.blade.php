@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     You wake up and are wondering what to do...
 @endsection
 

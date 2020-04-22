@@ -44,11 +44,10 @@ button {
         transform: translateY(10px);
 
         p,a {
-            border-bottom-width: 0;
+            border-bottom-color: $black;
         }
         &:before {
-            height: calc(100% - 20px);
-            border-bottom-width: 0;
+            border-bottom-color: $black;
         }
     }
 }

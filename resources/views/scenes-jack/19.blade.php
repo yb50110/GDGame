@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Jack:
     {{ $other_player }} suggests finding food.
     <br>
     You agree to help finding food

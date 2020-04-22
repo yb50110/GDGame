@@ -9,7 +9,27 @@
 @endsection
 
 @section('options')
-    check S...
-    if 1: no one is there anymore: go to 55
-    if 0: jack explores alone so the rest is there: go to 54
+    <script>
+        setInterval(function() {
+            $.ajax({
+                type: "GET",
+                url: "{{ route('session.decision_check', ['session_id' => $session_id, 'decision_id' => 'S']) }}",
+                dataType: 'text',
+                data: {'session_id':'{{ $session_id }}', 'decision_id':'S'},
+                cache: false,
+                success: function (data) {
+                    if (data === '0') {
+                        // jack explores alone so the rest is still there
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 54]) }}";
+                    } else if (data === '1') {
+                        // no one is there anymore
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 55]) }}";
+                    }
+                },
+                error: function (data) {
+                    console.log('error');
+                }
+            });
+        }, 500);
+    </script>
 @endsection

@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    RALPH:
     You think it can serve an important purpose, but not sure what that is exactly...
 @endsection
 

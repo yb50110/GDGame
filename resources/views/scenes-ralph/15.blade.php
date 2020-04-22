@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     Piggy suggests using it in meeting where only the person with it can speak.
 @endsection
 

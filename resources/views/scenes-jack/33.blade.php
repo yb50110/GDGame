@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Jack:
     You storm off to the jungle.
 @endsection
 

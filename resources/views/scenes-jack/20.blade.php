@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     {{ $other_player }} splits the group into two.
     <br>
     {{ $other_player }} asks what group you want to join...

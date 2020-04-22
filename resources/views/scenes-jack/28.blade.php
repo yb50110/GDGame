@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    JACK:
     {{ $other_player }} suggests starting fire but you argue back.
     <br>
     {{ $other_player }} is overruled.

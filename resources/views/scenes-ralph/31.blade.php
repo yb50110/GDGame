@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     You reluctantly agree to help hunting.
 @endsection
 

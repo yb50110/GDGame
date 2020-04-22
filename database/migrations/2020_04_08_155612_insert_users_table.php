@@ -14,8 +14,12 @@ class InsertUsersTable extends Migration
      */
     public function up()
     {
-        DB::table('users')->insert(['username' => 'player1', 'password' => Hash::make('play123')]);
-        DB::table('users')->insert(['username' => 'player2', 'password' => Hash::make('play123')]);
+        DB::table('users')->insert(['username' => 'apple', 'password' => Hash::make('play123')]);
+        DB::table('users')->insert(['username' => 'orange', 'password' => Hash::make('play123')]);
+        DB::table('users')->insert(['username' => 'cat', 'password' => Hash::make('play123')]);
+        DB::table('users')->insert(['username' => 'dog', 'password' => Hash::make('play123')]);
+        DB::table('users')->insert(['username' => 'burger', 'password' => Hash::make('play123')]);
+        DB::table('users')->insert(['username' => 'fries', 'password' => Hash::make('play123')]);
     }
 
     /**

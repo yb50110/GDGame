@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     {{ $other_player }} argues back and you are overruled.
 @endsection
 

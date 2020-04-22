@@ -5,7 +5,6 @@
 @endsection
 
 @section('prompt')
-    Ralph:
     {{ $other_player }} breaks the silence by saying they should hunt for food.
 @endsection
 
