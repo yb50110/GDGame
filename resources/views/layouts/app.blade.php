@@ -19,12 +19,15 @@
 <body>
 <div id="app">
     @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ route('logout') }}">Quit</a>
-                <a href="{{ route('home') }}">Home</a>
-            @endauth
-        </div>
+        @auth
+            <div class="top-left links">
+                    <a href="{{ route('logout') }}">Quit</a>
+                    <a href="{{ route('home') }}">Home</a>
+            </div>
+            <div class="top-right">
+                <p>Logged in user: {{ Auth::user()->username }}</p>
+            </div>
+        @endauth
     @endif
 
     <div class="content">

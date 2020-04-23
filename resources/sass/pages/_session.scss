@@ -1,5 +1,4 @@
 .container-session {
-    transform: translateY(10%);
 
     h1 {
         font-size: 3em;
@@ -16,16 +15,12 @@
     }
 
     img {
+        max-height: 60vh;
         width: 100%;
-    }
-    .role-options {
-        img {
-            width: auto;
-        }
     }
 
     form {
-        width: 700px;
+        width: 90%;
 
         input[type=radio] {
             position: absolute;
@@ -36,6 +31,7 @@
             + img {
                 cursor: pointer;
                 margin: 0 15px;
+                width: 80px;
 
                 &:hover {
                     opacity: 0.8;
@@ -44,6 +40,11 @@
 
             &:checked + img {
                 border-bottom: 10px solid $yellow;
+            }
+
+            &:disabled + img {
+                opacity: 0.4;
+                cursor: not-allowed;
             }
         }
 

@@ -8,6 +8,7 @@ use App\SessionUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class SessionController extends Controller
 {
@@ -109,9 +110,27 @@ class SessionController extends Controller
     }
 
 
-    // FUNCTIONS RELATING TO SETTING NAME---------------------------------------
+    // FUNCTIONS RELATING TO Roles----------------------------------------------
     // -------------------------------------------------------------------------
     public function role_update(Request $request, int $session_id) {
+        $roles = Role::all();
+
+        // if user submits form after it became disabled
+        if (!$request->role) {
+            return view('sessions/role', ['session_id' => $session_id, 'roles' => $roles, 'msg' => 'Another player has already selected this character']);
+        }
+
+        // if user submits right before it became disabled but another player already selected
+        $session_user_records = SessionUser::where('session_id', $session_id)
+            ->where('user_id', '!=', Auth::user()->id)
+            ->get();
+        foreach ($session_user_records as $record) {
+            if ($record->role_id == $request->role) {
+                return view('sessions/role', ['session_id' => $session_id, 'roles' => $roles, 'msg' => 'Another player has already selected this character']);
+            }
+        }
+
+        // if all passes,
         SessionUser::where([
             ['session_id', $session_id], ['user_id', Auth::user()->id]
         ])->update(['role_id' => $request->role]);
@@ -120,14 +139,18 @@ class SessionController extends Controller
     }
 
     public function role_check(int $session_id) {
-        $session_user_records = SessionUser::where('session_id', $session_id)->get();
+        $session_user_records = SessionUser::where('session_id', $session_id)
+            ->where('user_id', '!=', Auth::user()->id)
+            ->get();
 
+        $selected_roles = array();
         foreach ($session_user_records as $record) {
             if ($record->role_id == null) {
                 return 'false';
             }
+            array_push($selected_roles, $record->role_id);
         }
 
-        return 'true';
+        return $selected_roles;
     }
 }

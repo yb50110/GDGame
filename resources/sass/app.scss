@@ -18,6 +18,7 @@ html,body {
     font-family: Avenixel-Regular, monospace, san-serif;
     background: $black;
     color: $white;
+    margin: 0;
 }
 
 p,a,button,input {
@@ -33,7 +34,36 @@ a:hover {
     opacity: 0.8;
     text-decoration: none;
 }
+.links {
+    a {
+        padding: 10px 20px;
+    }
+}
+
+.top-left{
+    position: fixed;
+    top: 10px;
+    left: 0;
+}
+.top-right {
+    position: fixed;
+    top: 10px;
+    right: 0;
+    p {
+        padding: 10px 20px;
+        margin: 0;
+    }
+}
 
 .content {
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
     text-align: center;
+}
+
+.error {
+    color: $red;
 }

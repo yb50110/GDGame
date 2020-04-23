@@ -15,10 +15,10 @@
                     data: 'session_id={{ $session_id }}',
                     cache: false,
                     success: function (data) {
-                        if (data === 'true') {
+                        if (data !== 'false') {
+                            // returning false means there's a user who hasn't selected yet
+                            // so if it is anything BUT false, then everyone has selected
                             window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 1]) }}";
-                        } else {
-                            // other user didn't select a role yet
                         }
                     },
                     error: function (data) {

@@ -9,7 +9,7 @@
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => 0, 'decision_id' => 'x', 'option' =>1]) }}">xxxx</a>
+    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => 0, 'decision_id' => 'K', 'option' =>1]) }}">make a fire</a>
     <br>
-    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => 0, 'decision_id' => 'x', 'option' => 0]) }}">xxxx</a>
+    <a href="{{ route('scene.decision', ['session_id' => $session_id, 'scene_id' => 0, 'decision_id' => 'K', 'option' => 0]) }}">go find food</a>
 @endsection

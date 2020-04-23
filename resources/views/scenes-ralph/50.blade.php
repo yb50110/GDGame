@@ -24,6 +24,7 @@
                     } else if (data === '1') {
                         // jack ignored footprints
                         // keep checking jack's Q...
+
                         $.ajax({
                             type: "GET",
                             url: "{{ route('session.decision_check', ['session_id' => $session_id, 'decision_id' => 'Q']) }}",
@@ -43,6 +44,7 @@
                                 console.log('error');
                             }
                         });
+
                     }
                 },
                 error: function (data) {

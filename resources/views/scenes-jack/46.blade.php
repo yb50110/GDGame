@@ -9,7 +9,5 @@
 @endsection
 
 @section('options')
-    if there are other kids:
-    else:
     <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 0]) }}">next</a>
 @endsection

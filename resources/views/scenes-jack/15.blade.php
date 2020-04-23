@@ -20,10 +20,10 @@
                 success: function (data) {
                     if (data === '0') {
                         // ralph criticizes you
-                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 24]) }}";
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 25]) }}";
                     } else if (data === '1') {
                         // ralph doesn't say anything
-                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 25]) }}";
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 24]) }}";
                     }
                 },
                 error: function (data) {

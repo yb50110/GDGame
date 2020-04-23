@@ -2,19 +2,10 @@
   font-family: Avenixel-Regular;
   src: url("../fonts/Avenixel-Regular.ttf");
 }
-.container-welcome {
-  transform: translateY(100%);
-}
-
-.title {
+.container-welcome .title {
   font-size: 7em;
 }
 
-.container-login {
-  width: 50%;
-  margin: auto;
-  transform: translateY(100%);
-}
 .container-login button {
   margin-top: 40px;
 }
@@ -24,15 +15,12 @@
   margin: 100px auto;
 }
 .container-home button:hover {
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
 .container-home button a:hover {
   opacity: 1;
 }
 
-.container-session {
-  transform: translateY(10%);
-}
 .container-session h1 {
   font-size: 3em;
 }
@@ -46,13 +34,11 @@
   margin: auto;
 }
 .container-session img {
+  max-height: 60vh;
   width: 100%;
 }
-.container-session .role-options img {
-  width: auto;
-}
 .container-session form {
-  width: 700px;
+  width: 90%;
 }
 .container-session form input[type=radio] {
   position: absolute;
@@ -63,6 +49,7 @@
 .container-session form input[type=radio] + img {
   cursor: pointer;
   margin: 0 15px;
+  width: 80px;
 }
 .container-session form input[type=radio] + img:hover {
   opacity: 0.8;
@@ -70,11 +57,16 @@
 .container-session form input[type=radio]:checked + img {
   border-bottom: 10px solid #e6ca48;
 }
+.container-session form input[type=radio]:disabled + img {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 .container-session form button {
   margin-top: 50px;
 }
 
 .container-scene img {
+  max-height: 60vh;
   width: 100%;
 }
 .container-scene p {
@@ -141,6 +133,7 @@ html, body {
   font-family: Avenixel-Regular, monospace, san-serif;
   background: #000000;
   color: #ffffff;
+  margin: 0;
 }
 
 p, a, button, input {
@@ -158,6 +151,35 @@ a:hover {
   text-decoration: none;
 }
 
+.links a {
+  padding: 10px 20px;
+}
+
+.top-left {
+  position: fixed;
+  top: 10px;
+  left: 0;
+}
+
+.top-right {
+  position: fixed;
+  top: 10px;
+  right: 0;
+}
+.top-right p {
+  padding: 10px 20px;
+  margin: 0;
+}
+
 .content {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   text-align: center;
+}
+
+.error {
+  color: #d84b1a;
 }
