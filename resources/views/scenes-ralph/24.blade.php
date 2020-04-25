@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You and {{ $other_player }} both go fishing.
+    You and <span class="player-name">{{ $other_player->name }}</span> both go fishing.
 @endsection
 
 @section('options')

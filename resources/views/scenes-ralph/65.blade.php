@@ -5,28 +5,26 @@
 @endsection
 
 @section('prompt')
-    waiting for <span class="player-name">{{ $other_player->name }}</span> to make a decision...
+    Waiting for <span class="player-name">{{ $other_player->name }}</span> to make a decision...
 @endsection
 
 @section('options')
-
     <script>
         // ajax call to check if a decision has been made
-
         setInterval(function() {
             $.ajax({
                 type: "GET",
-                url: "{{ route('session.decision_check', ['session_id' => $session_id, 'decision_id' => 'A']) }}",
+                url: "{{ route('session.decision_check', ['session_id' => $session_id, 'decision_id' => 'D']) }}",
                 dataType: 'text',
-                data: {'session_id':'{{ $session_id }}', 'decision_id':'A'},
+                data: {'session_id':'{{ $session_id }}', 'decision_id':'D'},
                 cache: false,
                 success: function (data) {
                     if (data === '0') {
-                        // ralph approach you (jack)
-                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 5]) }}";
+                        // jack says that it's just a shell :(
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 11]) }}";
                     } else if (data === '1') {
-                        // ralph approached piggy
-                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 51]) }}";
+                        // jack suggest asking the others
+                        window.location.href = "{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 13]) }}";
                     }
                 },
                 error: function (data) {
@@ -34,7 +32,5 @@
                 }
             });
         }, 500);
-
     </script>
-
 @endsection

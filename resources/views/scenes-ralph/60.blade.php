@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You notice {{ $other_player }} is missing...
+    You notice <span class="player-name">{{ $other_player->name }}</span> is missing...
 @endsection
 
 @section('options')

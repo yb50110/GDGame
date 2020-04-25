@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} decides to stay near the shore.
+   <span class="player-name">{{ $other_player->name }}</span> decides to stay near the shore.
     <br>
     You head to the jungle alone.
 @endsection

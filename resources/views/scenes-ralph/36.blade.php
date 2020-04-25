@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} storms off to the jungle.
+   <span class="player-name">{{ $other_player->name }}</span> storms off to the jungle.
 @endsection
 
 @section('options')

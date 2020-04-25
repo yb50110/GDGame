@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} asks what we should or could do with it...
+    <span class="player-name">{{ $other_player->name }}</span> asks what we should or could do with it...
 @endsection
 
 @section('options')

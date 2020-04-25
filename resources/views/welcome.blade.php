@@ -3,10 +3,11 @@
 @section('content')
 
     <div class="container-welcome">
-        <div class="title">
+        <h1 class="title">
             Welcome
-        </div>
-        <a href="{{ route('login') }}">Login to continue</a>
+        </h1>
+        <h2>Can you play against the computer to survive without anyone dying?</h2>
+        <button><a href="{{ route('login') }}">Login to continue</a></button>
     </div>
 
 @endsection

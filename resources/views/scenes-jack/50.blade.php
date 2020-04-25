@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} explains to you that he saw a boat off the distance in the water but he took too long to start the fire, and now the boat is gone.
+   <span class="player-name">{{ $other_player->name }}</span> explains to you that he saw a boat off the distance in the water but he took too long to start the fire, and now the boat is gone.
 @endsection
 
 @section('options')

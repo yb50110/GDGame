@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} suggests calling the others and asking them too.
+   <span class="player-name">{{ $other_player->name }}</span> suggests calling the others and asking them too.
 @endsection
 
 @section('options')

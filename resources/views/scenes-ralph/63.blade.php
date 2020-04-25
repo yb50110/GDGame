@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You explain to {{ $other_player }} what happened.
+    You explain to <span class="player-name">{{ $other_player->name }}</span> what happened.
 @endsection
 
 @section('options')

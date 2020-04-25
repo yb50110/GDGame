@@ -5,9 +5,9 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} suggests starting fire but you argue back.
+   <span class="player-name">{{ $other_player->name }}</span> suggests starting fire but you argue back.
     <br>
-    {{ $other_player }} is overruled.
+   <span class="player-name">{{ $other_player->name }}</span> is overruled.
 @endsection
 
 @section('options')

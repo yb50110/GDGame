@@ -5,9 +5,9 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} splits the group into two.
+    <span class="player-name">{{ $other_player->name }}</span> splits the group into two.
     <br>
-    {{ $other_player }} asks what group you want to join...
+    <span class="player-name">{{ $other_player->name }}</span> asks what group you want to join...
 @endsection
 
 @section('options')

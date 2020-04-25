@@ -18,7 +18,7 @@ class SceneController extends Controller
         $role = Role::find($user_role)->name;
         $other_player = SessionUser::where('session_id', $session_id)
             ->where('user_id', '!=', Auth::user()->id)
-            ->first()->name;
+            ->first();
         // ----------------------------------------------------------------
 
         if ($role == 'Jack') {
@@ -39,7 +39,7 @@ class SceneController extends Controller
         $role = Role::find($user_role)->name;
         $other_player = SessionUser::where('session_id', $session_id)
             ->where('user_id', '!=', Auth::user()->id)
-            ->first()->name;
+            ->first();
         // ----------------------------------------------------------------
 
         if ($role == 'Jack') {

@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You notice {{ $other_player }} approach Piggy and the two of them begin exploring the island.
+    You notice <span class="player-name">{{ $other_player->name }}</span> approach Piggy and the two of them begin exploring the island.
 @endsection
 
 @section('options')

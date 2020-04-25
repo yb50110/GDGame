@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} argues back and you are overruled.
+   <span class="player-name">{{ $other_player->name }}</span> argues back and you are overruled.
 @endsection
 
 @section('options')

@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You criticizes {{ $other_player }}.
+    You criticizes <span class="player-name">{{ $other_player->name }}</span>.
     <br>
     There seem to be some tension...
 @endsection

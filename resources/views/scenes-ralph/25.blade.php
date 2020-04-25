@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You and {{ $other_player }} separate to different areas of the shore.
+    You and <span class="player-name">{{ $other_player->name }}</span> separate to different areas of the shore.
 @endsection
 
 @section('options')

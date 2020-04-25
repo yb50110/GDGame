@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    waiting for {{ $other_player }} to make a decision...
+    waiting for <span class="player-name">{{ $other_player->name }}</span> to make a decision...
 @endsection
 
 @section('options')

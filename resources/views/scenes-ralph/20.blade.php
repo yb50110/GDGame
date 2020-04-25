@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} agrees to help.
+   <span class="player-name">{{ $other_player->name }}</span> agrees to help.
 @endsection
 
 @section('options')

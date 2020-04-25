@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} breaks the silence by saying they should hunt for food.
+   <span class="player-name">{{ $other_player->name }}</span> breaks the silence by saying they should hunt for food.
 @endsection
 
 @section('options')

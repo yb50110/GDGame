@@ -9,5 +9,5 @@
 @endsection
 
 @section('options')
-    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 63]) }}">next</a>
+    <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 64]) }}">next</a>
 @endsection

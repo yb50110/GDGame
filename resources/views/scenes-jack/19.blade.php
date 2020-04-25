@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} suggests finding food.
+    <span class="player-name">{{ $other_player->name }}</span> suggests finding food.
     <br>
     You agree to help finding food
 @endsection

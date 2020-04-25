@@ -8,7 +8,7 @@
     ... but you fail
     <br>
     <br>
-    Waiting for {{ $other_player }} to make decision...
+    Waiting for <span class="player-name">{{ $other_player->name }}</span> to make decision...
 @endsection
 
 @section('options')

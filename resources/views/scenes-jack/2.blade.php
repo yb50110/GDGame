@@ -10,4 +10,11 @@
 
 @section('options')
     <a href="{{ route('scene.show', ['session_id' => $session_id, 'scene_id' => 3]) }}">next</a>
+
+    <audio id="sound-planecrash" src="{{ asset('sound/planecrash.m4a') }}" type="audio/m4a" autostart="false"></audio>
+    <script>
+        $(document).ready(function() {
+            document.getElementById('sound-planecrash').play();
+        });
+    </script>
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You notice {{ $other_player }} picking it up.
+    You notice <span class="player-name">{{ $other_player->name }}</span> picking it up.
 @endsection
 
 @section('options')
