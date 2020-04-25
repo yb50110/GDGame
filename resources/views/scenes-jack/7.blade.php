@@ -8,7 +8,7 @@
     You continue to dry your shirt.
     <br>
     <br>
-    Waiting on {{ $other_player }} to make a decision...
+    Waiting on <span class="player-name">{{ $other_player->name }}</span> to make a decision...
 @endsection
 
 @section('options')

@@ -26,6 +26,11 @@ button {
         padding: 10px 35px;
         background: $white;
         border-bottom: 10px solid $gray;
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &:before {

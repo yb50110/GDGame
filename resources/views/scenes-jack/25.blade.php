@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} criticizes you. There seems to be tension.
+   <span class="player-name">{{ $other_player->name }}</span> criticizes you. There seems to be tension.
 @endsection
 
 @section('options')

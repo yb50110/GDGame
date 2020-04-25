@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} declines.
+   <span class="player-name">{{ $other_player->name }}</span> declines.
     <br>
     You wonder what to do now...
 @endsection

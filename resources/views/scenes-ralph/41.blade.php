@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} does to the jungle alone.
+   <span class="player-name">{{ $other_player->name }}</span> does to the jungle alone.
 @endsection
 
 @section('options')

@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You suggest to {{ $other_player }} finding a stick in case something pops out of the bush.
+    You suggest to <span class="player-name">{{ $other_player->name }}</span> finding a stick in case something pops out of the bush.
 @endsection
 
 @section('options')

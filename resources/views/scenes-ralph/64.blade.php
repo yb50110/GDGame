@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You and <span class="player-name">{{ $other_player->name }}</span> separate to different areas of the shore.
+   <span class="player-name">{{ $other_player->name }}</span> suggests finding a stick in case something pops out of the bush.
 @endsection
 
 @section('options')

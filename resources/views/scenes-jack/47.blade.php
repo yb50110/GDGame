@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You return to the shore and find {{ $other_player }}.
+    You return to the shore and find <span class="player-name">{{ $other_player->name }}</span>.
 @endsection
 
 @section('options')

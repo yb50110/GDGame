@@ -8,7 +8,7 @@
     You two discover a conch on the sand.
     <br>
     <br>
-    Waiting for {{ $other_player }} to make a decision...
+    Waiting for <span class="player-name">{{ $other_player->name }}</span> to make a decision...
 @endsection
 
 @section('options')

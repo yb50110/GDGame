@@ -9,10 +9,43 @@
         max-width: 600px;
         width: 90%;
         margin: auto;
+
+        .player-name {
+            color: $orange;
+        }
     }
 
-    a:first-of-type {
-        margin-top: 50px;
-        display: block;
+    a {
+        margin: 10px 0;
+
+        &:first-of-type {
+            margin-top: 50px;
+            display: inline-block;
+        }
+    }
+}
+
+.player-index {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    left: 20px;
+    top: 60px;
+
+    .image-container {
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        margin-right: 15px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    p {
+        font-size: 1.5em;
+        color: $orange;
+        margin: 0;
     }
 }

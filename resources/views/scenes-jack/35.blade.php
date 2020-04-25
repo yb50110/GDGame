@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You ask {{ $other_player }} if s/he want to go into the jungle...
+    You ask <span class="player-name">{{ $other_player->name }}</span> if s/he want to go into the jungle...
 @endsection
 
 @section('options')

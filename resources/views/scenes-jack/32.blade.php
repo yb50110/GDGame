@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} suggests to make a fire first.
+   <span class="player-name">{{ $other_player->name }}</span> suggests to make a fire first.
 @endsection
 
 @section('options')

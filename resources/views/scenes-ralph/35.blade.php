@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} takes the criticism and stays quiet.
+   <span class="player-name">{{ $other_player->name }}</span> takes the criticism and stays quiet.
     <br>
     You suggest to make a fire first.
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} argues back and an argument begins but {{ $other_player }} soon realizes s/he is outnumbered.
+   <span class="player-name">{{ $other_player->name }}</span> argues back and an argument begins but <span class="player-name">{{ $other_player->name }}</span> soon realizes s/he is outnumbered.
 @endsection
 
 @section('options')

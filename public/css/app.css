@@ -4,6 +4,14 @@
 }
 .container-welcome .title {
   font-size: 7em;
+  margin: 0;
+}
+.container-welcome h2 {
+  font-weight: 400;
+  margin: 0 auto 50px auto;
+  font-size: 2.5em;
+  width: 80%;
+  line-height: 90%;
 }
 
 .container-login button {
@@ -74,9 +82,37 @@
   width: 90%;
   margin: auto;
 }
+.container-scene p .player-name {
+  color: #e27b17;
+}
+.container-scene a {
+  margin: 10px 0;
+}
 .container-scene a:first-of-type {
   margin-top: 50px;
-  display: block;
+  display: inline-block;
+}
+
+.player-index {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  left: 20px;
+  top: 60px;
+}
+.player-index .image-container {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.player-index .image-container img {
+  width: 100%;
+}
+.player-index p {
+  font-size: 1.5em;
+  color: #e27b17;
+  margin: 0;
 }
 
 form {
@@ -107,6 +143,10 @@ button p, button a {
   padding: 10px 35px;
   background: #ffffff;
   border-bottom: 10px solid #d4d4d4;
+  opacity: 1;
+}
+button p:hover, button a:hover {
+  opacity: 1;
 }
 button:before {
   position: absolute;

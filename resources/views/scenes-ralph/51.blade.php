@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You notice {{ $other_player }} returning to the shore from the jungle.
+    You notice <span class="player-name">{{ $other_player->name }}</span> returning to the shore from the jungle.
 @endsection
 
 @section('options')

@@ -7,7 +7,7 @@
 @section('prompt')
     You split the group into two: hunting in the jungle or fishing.
     <br>
-    You ask {{ $other_player }} what group {{ $other_player }} would like to join.
+    You ask <span class="player-name">{{ $other_player->name }}</span> what group<span class="player-name">{{ $other_player->name }}</span> would like to join.
 @endsection
 
 @section('options')

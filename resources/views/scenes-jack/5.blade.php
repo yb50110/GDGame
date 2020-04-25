@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    {{ $other_player }} approaches you and asks if you want to explore the island together.
+   <span class="player-name">{{ $other_player->name }}</span> approaches you and asks if you want to explore the island together.
 @endsection
 
 @section('options')

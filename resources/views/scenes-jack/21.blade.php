@@ -5,7 +5,7 @@
 @endsection
 
 @section('prompt')
-    You and {{ $other_player }} separate.
+    You and <span class="player-name">{{ $other_player->name }}</span> separate.
 @endsection
 
 @section('options')

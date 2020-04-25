@@ -48,6 +48,10 @@
                     }
                 })
             }, 500);
+
+            // disable piggy and simone for now
+            document.getElementById('role-' + 3).disabled = true;
+            document.getElementById('role-' + 4).disabled = true;
         });
     </script>
 
