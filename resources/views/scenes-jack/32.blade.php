@@ -1,11 +1,11 @@
 @extends('layouts.scene')
 
 @section('image')
-    <img src="/images/0-placeholder.jpg">
+    <img src="/images/19-ralp-fire.jpg">
 @endsection
 
 @section('prompt')
-   <span class="player-name">{{ $other_player->name }}</span> suggests to make a fire first.
+    <span class="player-name">{{ $other_player->name }}</span> suggests to make a fire first.
 @endsection
 
 @section('options')

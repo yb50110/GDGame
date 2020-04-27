@@ -18,19 +18,19 @@
 </head>
 <body>
 
-<script>
-    $(document).ready(function() {
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('mouseover', playButtonSound)
-        });
-    });
+{{--<script>--}}
+{{--    $(document).ready(function() {--}}
+{{--        document.querySelectorAll('a').forEach(link => {--}}
+{{--            link.addEventListener('mouseover', playButtonSound)--}}
+{{--        });--}}
+{{--    });--}}
 
-    function playButtonSound() {
-        var audio = document.getElementById('sound-button');
-        audio.play();
-    }
-</script>
-<audio id="sound-button" src="{{ asset('sound/button.ogg') }}" type="audio/ogg" autostart="false"></audio>
+{{--    function playButtonSound() {--}}
+{{--        var audio = document.getElementById('sound-button');--}}
+{{--        audio.play();--}}
+{{--    }--}}
+{{--</script>--}}
+{{--<audio id="sound-button" src="{{ asset('sound/button.ogg') }}" type="audio/ogg" autostart="false"></audio>--}}
 
 <div id="app">
     @if (Route::has('login'))
