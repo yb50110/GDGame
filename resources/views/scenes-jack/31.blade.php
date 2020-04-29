@@ -1,11 +1,11 @@
 @extends('layouts.scene')
 
 @section('image')
-    <img src="/images/0-placeholder.jpg">
+    <img src="/images/18-jack-argues.jpg">
 @endsection
 
 @section('prompt')
-    An argument begins buck you realize you are outnumbered.
+    An argument begins but you realize you are outnumbered.
 @endsection
 
 @section('options')
